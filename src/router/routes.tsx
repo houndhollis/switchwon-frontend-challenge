@@ -5,6 +5,7 @@ import { ExchangeLayout } from '@/features/exchange/components/ExchangeLayout';
 import { ExchangePage } from '@/features/exchange/page';
 import { AppLayout } from '@/shared/components/AppLayout';
 import { createBrowserRouter } from 'react-router-dom';
+import { NotFoundPage } from '@/shared/components/NotFoundPage';
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
             ],
           },
         ],
+      },
+      {
+        path: '*',
+        element: <NotFoundPage />,
       },
     ],
   },
