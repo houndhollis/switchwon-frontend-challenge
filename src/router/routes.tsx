@@ -1,5 +1,7 @@
 import { AuthGuard } from '@/features/auth/components/AuthGuard';
 import { AuthPage } from '@/features/auth/page';
+import { ExchangeLayout } from '@/features/exchange/components/ExchangeLayout';
+import { ExchangePage } from '@/features/exchange/page';
 import { AppLayout } from '@/shared/components/AppLayout';
 import { createBrowserRouter } from 'react-router-dom';
 
@@ -16,15 +18,20 @@ export const router = createBrowserRouter([
             element: <AuthPage />,
           },
           {
-            path: 'exchange',
+            element: <ExchangeLayout />,
             children: [
               {
-                index: true,
-                element: <h1>환전</h1>,
-              },
-              {
-                path: 'orders',
-                element: <h1>내역</h1>,
+                path: 'exchange',
+                children: [
+                  {
+                    index: true,
+                    element: <ExchangePage />,
+                  },
+                  {
+                    path: 'orders',
+                    element: <h1>내역</h1>,
+                  },
+                ],
               },
             ],
           },
