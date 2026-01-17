@@ -25,3 +25,13 @@ export const CURRENCY_META = {
   },
 } as const;
 
+export const TRADE_TYPES = {
+  buy: { text: '살래요' },
+  sell: { text: '팔래요' },
+} as const;
+
+// -------------- 초기 URL params 값 대응 -------------------
+export const DEFAULT_EXCHANGE_PARAMS = {
+  currency: 'USD' as CurrencyType,
+  tradeType: 'buy' as TradeType,
+};
