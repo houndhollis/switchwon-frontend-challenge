@@ -22,7 +22,7 @@ pnpm install
 pnpm dev
 ```
 
-개발 서버 실행
+개발 서버 실행 노드 버전은 21.9 이상으로 맞춰주세요.
 
 ##
 
@@ -109,3 +109,20 @@ src/
 
 - **remote 레이어 분리**  
   → API 변경 시 영향 최소화
+
+
+## 시연 영상
+
+| 로그인 | 환전 하기 |
+|------------|------------|
+|![Jan-18-2026 03-45-16](https://github.com/user-attachments/assets/03cf6437-3bcd-4a8f-a4a2-96f307aa847f)|![Jan-18-2026 03-49-40](https://github.com/user-attachments/assets/c5cda522-75cf-4e0c-b7c8-02190334a2a0)||
+| 반응형 | 환전 내역 |
+|![Jan-18-2026 03-50-37](https://github.com/user-attachments/assets/dae2a5a3-147a-4fdf-9a6d-a1bebc42cd52)|![Jan-18-2026 03-51-38](https://github.com/user-attachments/assets/52b048f6-ebc0-4bc6-8ca7-1d6531601e77)|
+| 라우트 보호 |
+| ![Jan-18-2026 03-52-20](https://github.com/user-attachments/assets/555823c0-b581-48cd-83fd-0f31f7afbc9a) |
+
+
+
+
+
+
