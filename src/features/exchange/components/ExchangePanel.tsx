@@ -7,7 +7,7 @@ import { useOrdersQuote } from '../hooks/useOrdersQuote';
 import { ExchangeRateInfo } from './ExchangeRateInfo';
 import { ExchangeButton } from './ExchangeButton';
 
-export const ExchangePannel = () => {
+export const ExchangePanel = () => {
   const [purchaseAmount, setPurchaseAmount] = useState(0);
   const [calculatedAmount, setCalculatedAmount] = useState(0);
   const { currency, tradeType, selectedChangeCurrency } = useExchangeContext();
