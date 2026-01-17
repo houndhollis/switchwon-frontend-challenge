@@ -33,3 +33,17 @@ export const getOrderQuote = async (currency: CurrencyType, amount: number) => {
 
   return res;
 };
+
+// ---------------- 환전 주문 요청 ----------------------------
+export const getOrders = async (
+  exchangeRateId: number | undefined,
+  fromCurrency: string | undefined,
+  toCurrency: string | undefined,
+  forexAmount: number,
+) => {
+  const res = await client.post<string>('orders', {
+    json: { exchangeRateId, fromCurrency, toCurrency, forexAmount },
+  });
+
+  return res;
+};

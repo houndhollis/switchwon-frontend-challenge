@@ -4,11 +4,13 @@ import { ExchangeOptions } from './ExchangeOptions';
 import { useExchangeContext } from '../context';
 import { ExchangeInputPanel } from './ExchangeInputPanel';
 import { useOrdersQuote } from '../hooks/useOrdersQuote';
+import { ExchangeRateInfo } from './ExchangeRateInfo';
+import { ExchangeButton } from './ExchangeButton';
 
 export const ExchangePannel = () => {
   const [purchaseAmount, setPurchaseAmount] = useState(0);
   const [calculatedAmount, setCalculatedAmount] = useState(0);
-  const { currency, tradeType } = useExchangeContext();
+  const { currency, tradeType, selectedChangeCurrency } = useExchangeContext();
 
   const handleReset = useCallback(() => {
     setPurchaseAmount(0);
@@ -37,6 +39,15 @@ export const ExchangePannel = () => {
           tradeType={tradeType}
           mutation={mutation}
         />
+
+        <div>
+          <ExchangeRateInfo selectedChangeCurrency={selectedChangeCurrency} />
+          <ExchangeButton
+            tradeType={tradeType}
+            selectedChangeCurrency={selectedChangeCurrency}
+            purchaseAmount={purchaseAmount}
+          />
+        </div>
       </div>
     </div>
   );

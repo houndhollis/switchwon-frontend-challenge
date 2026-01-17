@@ -20,3 +20,9 @@ export interface MyWalletResponseType {
   totalKrwBalance: number;
   wallets: WalletType[];
 }
+
+// ------------------- 환전 주문 견적 응답 타입 -------------------------
+export interface OrdersQuoteResponseType {
+  krwAmount: number;
+  appliedRate: number;
+}
