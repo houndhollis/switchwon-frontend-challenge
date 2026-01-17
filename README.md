@@ -2,11 +2,15 @@
 
 ### 1. Environment Variables
 
-```bash
-.env.template
-```
+`.env.template` 파일을 기반으로 `.env` 파일 생성
 
-.env.template 파일 VITE_API_BASE_URL에 실행 가능한 백엔드 서버 주소를 넣어주세요.
+```bash
+.env 파일 생성 후 VITE_API_BASE_URL에 실행 가능한 백엔드 서버 주소를 넣어주세요.
+```
+#### ✅ 추가 설명
+
+- Vite dev 서버에서 `/api` 요청은 `.env`에 있는 `VITE_API_BASE_URL`로 프록시됨  
+- 클론 후 바로 실행하면 **프록시 에러** 발생 → 반드시 `.env` 수정 필요  
 
 ### 2. Install Dependencies
 
@@ -118,8 +122,8 @@ src/
 |![Jan-18-2026 03-45-16](https://github.com/user-attachments/assets/03cf6437-3bcd-4a8f-a4a2-96f307aa847f)|![Jan-18-2026 03-49-40](https://github.com/user-attachments/assets/c5cda522-75cf-4e0c-b7c8-02190334a2a0)||
 | 반응형 | 환전 내역 |
 |![Jan-18-2026 03-50-37](https://github.com/user-attachments/assets/dae2a5a3-147a-4fdf-9a6d-a1bebc42cd52)|![Jan-18-2026 03-51-38](https://github.com/user-attachments/assets/52b048f6-ebc0-4bc6-8ca7-1d6531601e77)|
-| 라우트 보호 |
-| ![Jan-18-2026 03-52-20](https://github.com/user-attachments/assets/555823c0-b581-48cd-83fd-0f31f7afbc9a) |
+| 라우트 보호 | 404 페이지 |
+| ![Jan-18-2026 03-52-20](https://github.com/user-attachments/assets/555823c0-b581-48cd-83fd-0f31f7afbc9a) |![Jan-18-2026 04-09-41](https://github.com/user-attachments/assets/331a68ed-9924-4ab0-ac60-0242f32d9645) |
 
 
 
