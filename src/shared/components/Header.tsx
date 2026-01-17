@@ -13,11 +13,20 @@ export const Header = () => {
     navigate('/');
   }, [navigate]);
 
+  const moveToHome = useCallback(() => {
+    navigate('/exchange');
+  }, [navigate]);
+
   const isExchange = location.pathname === '/exchange';
 
   return (
     <div className="py-4 px-10 flex items-center justify-between border-b border-[#D0D6DB] max-sm:justify-end max-sm:px-4">
-      <p className="text-[24px] font-bold text-black max-sm:hidden">Exchage app</p>
+      <p
+        onClick={moveToHome}
+        className="text-[24px] font-bold text-black max-sm:hidden cursor-pointer"
+      >
+        Exchage app
+      </p>
       <div className="flex items-center gap-2">
         <p
           className={clsx(
