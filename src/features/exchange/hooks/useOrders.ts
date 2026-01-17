@@ -32,6 +32,11 @@ export const useOrders = () => {
           queryKey: key,
         }),
       );
+
+      showToast({
+        title: '주문을 완료하었습니다.',
+        type: 'success',
+      });
     },
     onError: async (error: BaseResponseType<unknown>, variables) => {
       if (error.code === FAILURE_CODES.EXCHANGE_RATE_MISMATCH) {
